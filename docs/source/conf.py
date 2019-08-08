@@ -19,7 +19,12 @@
 #
 import os
 import sys
+import django
 sys.path.insert(0, os.path.abspath('../..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'niamoto_portal.settings'
+django.setup()
+
 
 
 # -- General configuration ------------------------------------------------
@@ -172,5 +177,4 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-
-
+# autodoc_mock_imports = [ "django" ]

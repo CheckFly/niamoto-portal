@@ -5,6 +5,8 @@ niamoto-portal
    :maxdepth: 4
 
    apps
+   generate_secret_key
+   manage
    niamoto_portal
    rest
    utils

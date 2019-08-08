@@ -92,11 +92,12 @@ class OccurrencesInfosViewSet(ViewSet):
 
 def get_stats(model, field_name):
     """
-        Generate dictionnaire aggregate
-        :param model: A model app.
-        :param field_name: The field_name to slice for the stats.
-        :return: dict: Basic stats about
-            a field of a dataset (count, min, max, avg).
+    Generate dictionnaire aggregate
+    
+    :param model: A model app.
+    :param field_name: The field_name to slice for the stats.
+    :return: dict: Basic stats about
+        a field of a dataset (count, min, max, avg).
     """
     response = model.objects.aggregate(
         Count(field_name),
